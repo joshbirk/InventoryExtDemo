@@ -3,7 +3,7 @@ This demo uses a Node.js proxy to authenticate and communicate back to the Sales
 
 =Requirements=
 This demo is meant to be used alongside the Warehouse Demo for Senchacon, available as an unmanaged package here:
-[url]
+[http://sencha-demos.herokuapp.com/sencha_vf ](http://sencha-demos.herokuapp.com/sencha_vf)
 
 ## Register for a Developer Edition Instance on Force.com
 
@@ -34,11 +34,11 @@ Select all available OAuth scopes
 
 ## Installation
 After cloning the project, the following environment variables must be created:
-*SFUSER=username of the API user
-*SFPASS=password of the API user
-*CLIENTID=Consumer key of the Connected App
-*SECRET=Secret key of the Connected App
-*CALLBACK=Callback URL of the Connected App
+-SFUSER=username of the API user
+-SFPASS=password of the API user
+-CLIENTID=Consumer key of the Connected App
+-SECRET=Secret key of the Connected App
+-CALLBACK=Callback URL of the Connected App
 
 ## Using Heroku
 1. Create the Heroku Application. 
