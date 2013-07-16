@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "express": "3.1.0",
-    "request": "*"
+    "request": "*",
+	"nforce": "*",
+	"now": "*"
   },
   "engines": {
     "node": "0.10.x",
