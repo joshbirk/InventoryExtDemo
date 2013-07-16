@@ -1,10 +1,14 @@
 {
-  "name": "node-example",
+  "name": "Sencha-touch-and-force.com-sample",
+  "description": "A sample of a Sencha Touch app talking to force.com API",
   "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
   "dependencies": {
-    "express": "3.1.x",
-	"nforce" : "*",
-	"now" : "*"
+    "express": "3.1.0",
+    "request": "*"
   },
   "engines": {
     "node": "0.10.x",
