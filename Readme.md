@@ -43,6 +43,7 @@ After cloning the project, the following environment variables must be created:
 5. CALLBACK=Callback URL of the Connected App
 
 ```
+//For example:
 export SFUSER="your@DevEd.com"
 export SFPASS="pwd"
 export CLIENTID="3MVG9A2kN3Bn17hv.OQhYu2oiaRzVT"
@@ -64,6 +65,7 @@ Where {appname} refers to the desired app name.  Without the app name set, Herok
 3. Use heroku `config:add VAR=VALUE` to create the process variables
 
 ```
+//For example:
 config:add SFUSER="your@DevEd.com"
 config:add SFPASS="pwd"
 config:add CLIENTID="3MVG9A2kN3Bn17hv.OQhYu2oiaRzVT"
