@@ -19,8 +19,7 @@ org.authenticate({ username: sfuser, password: sfpass}, function(err, _oauth) {
 	oauth = _oauth;
   }
 
-var str = org.stream('ReducedPrices', oauth);
-
+  var str = org.stream('ReducedPrices', oauth);
   str.on('connect', function(){
     console.log('connected to pushtopic');
   });
@@ -89,7 +88,18 @@ app.get('/:objectType/:id', function (request, response) {
 
 app.post('/InventorySubmit',function (request, response) {
 	console.log('Sending Inventory Data');
-	org.apexRest({uri:'InventoryControl', method: 'POST', body: request.body, urlParams: request.params}, oauth, function(err,resp){
+	enveloped_body = {};
+	if(request.body.length) {
+		enveloped_body = {
+			items: request.body
+		}
+	} else {
+		enveloped_body = {
+			items: [request.body]
+		}
+	}
+	console.log(enveloped_body);
+	org.apexRest({uri:'InventoryControl', method: 'POST', body: enveloped_body, urlParams: request.params}, oauth, function(err,resp){
 	    if(!err) {
 	      console.log(resp);
 	      response.send(resp);

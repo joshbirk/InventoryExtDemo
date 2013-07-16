@@ -27,7 +27,7 @@ Ext.define('Warehouse.view.InvoiceGrid',
                 },
 				{
                     xtype: 'gridcolumn',
-                    dataIndex: 'Quantity',
+                    dataIndex: 'Quantity__c',
                     text: 'Quantity',
 					field: {xtype: 'numberfield'},
 					editor: {allowBlank: false},
@@ -36,7 +36,7 @@ Ext.define('Warehouse.view.InvoiceGrid',
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'Unit_Price',
+                    dataIndex: 'Price__c',
                     text: 'Unit Price',
 					field: {xtype: 'numberfield'},
 					editor: {allowBlank: false},
@@ -50,7 +50,7 @@ Ext.define('Warehouse.view.InvoiceGrid',
                     xtype: 'gridcolumn',
                     text: 'Total',
 					renderer : function(value, metaData, record, rowIdx, colIdx, store, view) {
-						    return Ext.util.Format.usMoney(record.get('Unit_Price') * record.get('Quantity'));
+						    return Ext.util.Format.usMoney(record.get('Price__c') * record.get('Quantity__c'));
 					        },
 					summaryType: function(records){
 			                var i = 0,
@@ -60,7 +60,7 @@ Ext.define('Warehouse.view.InvoiceGrid',
 
 			                for (; i < length; ++i) {
 			                    record = records[i];
-			                    total += record.get('Unit_Price') * record.get('Quantity');
+			                    total += record.get('Price__c') * record.get('Quantity__c');
 			                }
 			                return total;
 			            },
