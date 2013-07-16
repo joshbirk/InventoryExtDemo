@@ -1,4 +1,4 @@
-=Inventory Ext JS Demo=
+# Inventory Ext JS Demo
 This demo uses a Node.js proxy to authenticate and communicate back to the Salesforce Platform.  It uses an username-password flow with OAuth for authentication, grabs the current merchandise from the org, allows users to create an invoice and send the invoice back to a custom Apex REST endpoint for submission.  It also receives PushTopics from the Salesforce Streaming API for realtime updates on price reductions, which will update the entire interface (including the Invoice if the price reduction is lower than the current unit price).
 
 =Requirements=
