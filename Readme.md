@@ -28,17 +28,27 @@ admin to control it:
 7. Developer Name: YourAppName
 8. Contact Email: Your email
 9. Callback URL: https://(yourapplicationurl)/index.html
-NOTE: This must have an https:// secure URL, or run on localhost.
+
+NOTE: Callback url <b>must</b> have an https:// secure URL, or run on localhost.
 Select all available OAuth scopes
 
 
 ## Installation
 After cloning the project, the following environment variables must be created:
--SFUSER=username of the API user
--SFPASS=password of the API user
--CLIENTID=Consumer key of the Connected App
--SECRET=Secret key of the Connected App
--CALLBACK=Callback URL of the Connected App
+
+1. SFUSER=username of the API user
+2. SFPASS=password of the API user
+3. CLIENTID=Consumer key of the Connected App
+4. SECRET=Secret key of the Connected App
+5. CALLBACK=Callback URL of the Connected App
+
+```
+export SFUSER="your@DevEd.com"
+export SFPASS="pwd"
+export CLIENTID="3MVG9A2kN3Bn17hv.OQhYu2oiaRzVT"
+export SECRET="clientSecret"
+export CALLBACK="http://localhost:3000/"
+```
 
 ## Using Heroku
 1. Create the Heroku Application. 
@@ -51,4 +61,12 @@ Where {appname} refers to the desired app name.  Without the app name set, Herok
 
         git push heroku master
 
-3. Use heroku config:add VAR=VALUE to create the process variables
+3. Use heroku `config:add VAR=VALUE` to create the process variables
+
+```
+config:add SFUSER="your@DevEd.com"
+config:add SFPASS="pwd"
+config:add CLIENTID="3MVG9A2kN3Bn17hv.OQhYu2oiaRzVT"
+config:add SECRET="clientSecret"
+config:add CALLBACK="http://localhost:3000/"
+```
