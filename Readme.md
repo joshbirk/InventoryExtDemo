@@ -34,11 +34,11 @@ Select all available OAuth scopes
 
 ## Installation
 After cloning the project, the following environment variables must be created:
-SFUSER=username of the API user
-SFPASS=password of the API user
-CLIENTID=Consumer key of the Connected App
-SECRET=Secret key of the Connected App
-CALLBACK=Callback URL of the Connected App
+*SFUSER=username of the API user
+*SFPASS=password of the API user
+*CLIENTID=Consumer key of the Connected App
+*SECRET=Secret key of the Connected App
+*CALLBACK=Callback URL of the Connected App
 
 ## Using Heroku
 1. Create the Heroku Application. 
